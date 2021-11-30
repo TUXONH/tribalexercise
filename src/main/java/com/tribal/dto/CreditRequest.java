@@ -1,48 +1,33 @@
 package com.tribal.dto;
 
+import com.tribal.utils.FoundingType;
+
 import java.math.BigDecimal;
-import java.math.BigInteger;
+import java.util.Date;
 
 public class CreditRequest {
-    private FoundingTypes foundingType;
+    private FoundingType.EnumFoundingTypes foundingType;
     private BigDecimal cashBalance;
     private BigDecimal monthlyRevenue;
-    private BigInteger requestedCreditLine;
+    private BigDecimal requestedCreditLine;
+    private Date requestedDate;
+    private Boolean valid;
 
-    public FoundingTypes getFoundingType() {
+    public FoundingType.EnumFoundingTypes getFoundingType() {
         return foundingType;
     }
-
-    public void setFoundingType(FoundingTypes foundingType) {
-        this.foundingType = foundingType;
-    }
-
     public BigDecimal getCashBalance() {
         return cashBalance;
     }
-
-    public void setCashBalance(BigDecimal cashBalance) {
-        this.cashBalance = cashBalance;
-    }
-
     public BigDecimal getMonthlyRevenue() {
         return monthlyRevenue;
     }
-
-    public void setMonthlyRevenue(BigDecimal monthlyRevenue) {
-        this.monthlyRevenue = monthlyRevenue;
-    }
-
-    public BigInteger getRequestedCreditLine() {
+    public BigDecimal getRequestedCreditLine() {
         return requestedCreditLine;
     }
-
-    public void setRequestedCreditLine(BigInteger requestedCreditLine) {
-        this.requestedCreditLine = requestedCreditLine;
+    public Date requestedDate() { return requestedDate; }
+    public Boolean getValid() {
+        return valid;
     }
 
-    public enum FoundingTypes {
-        STARTUP,
-        SME
-    }
 }

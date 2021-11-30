@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "4638cfb1-e941-4a5b-a4d7-6101658770a8",
+		"name": "Tribal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Valid Credit",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"foundingType\": \"SME\",\r\n\"cashBalance\": 435.30,\r\n\"monthlyRevenue\": 111.45,\r\n\"requestedCreditLine\": 102\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{post}}/validCredit",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{post}}",
+					"path": [
+						"validCredit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
